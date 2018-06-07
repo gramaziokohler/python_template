@@ -18,7 +18,7 @@ Install `cookiecutter` command line: `pip install cookiecutter`
 
 Generate a new Cookiecutter template layout:
 ```
-$ cookiecutter gh:gramaziokohler/python_template
+$ cookiecutter https://github_username:git_hub_password@github.com/gramaziokohler/python_template.git
 ```
 
 ## License
