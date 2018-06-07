@@ -109,9 +109,6 @@ def docs(ctx, rebuild=True, check_links=False):
 @task()
 def check(ctx):
     """Check the consistency of documentation, coding style and a few other things."""
-    log.write('Checking MANIFEST.in...')
-    ctx.run('check-manifest')
-
     log.write('Checking ReStructuredText formatting...')
     ctx.run('python setup.py check --strict --metadata --restructuredtext')
 
@@ -120,6 +117,9 @@ def check(ctx):
 
     log.write('Checking python imports...')
     ctx.run('isort --check-only --diff --recursive src tests setup.py')
+
+    log.write('Checking MANIFEST.in...')
+    ctx.run('check-manifest')
 
 
 @task(help={

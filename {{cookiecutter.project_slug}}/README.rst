@@ -12,7 +12,7 @@
 
 .. start-project description
 
-**{{ cookiecutter.project_name }}** ...
+**{{ cookiecutter.project_short_description }}** ...
 
 
 Main features

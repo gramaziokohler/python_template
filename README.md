@@ -5,10 +5,10 @@ A template for GKR python projects
 ## Features
 
 * Project folder and file skeleton
-* Documentation based on sphinx/ReStructuredText
-* Testing framework: [pytest]()
+* Documentation based on [Sphinx](http://www.sphinx-doc.org/en/master/)/[reStructuredText](http://docutils.sourceforge.net/rst.html)
+* Testing framework: [pytest](https://docs.pytest.org/en/latest/)
 * Basic setup script to create pip installable packages
-* Automation of common tasks for development workflow based on [pyinvoke]() (generate documentation, run tests, check format, etc.)
+* Automation of common tasks for development workflow based on [pyinvoke](http://www.pyinvoke.org/) (generate documentation, run tests, check format, etc.)
 
 ## Requirements
 
@@ -18,7 +18,25 @@ Install `cookiecutter` command line: `pip install cookiecutter`
 
 Generate a new Cookiecutter template layout:
 ```
-$ cookiecutter https://github_username:git_hub_password@github.com/gramaziokohler/python_template.git
+$ cookiecutter https://github_username:github_password@github.com/gramaziokohler/python_template.git
+```
+
+Go to project folder:
+
+```
+$ cd <project-slug>
+```
+
+Install dependencies for development workflow:
+
+```
+$ pip install -r requirements-dev.txt
+```
+
+Now you can see which tasks are available:
+
+```
+$ invoke help
 ```
 
 ## License
