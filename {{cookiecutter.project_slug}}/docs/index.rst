@@ -4,8 +4,8 @@
 
 .. start-badges
 
-.. image:: file
-    :target: link
+.. image:: https://avatars3.githubusercontent.com/u/32545728?s=200&v=4
+    :target: http://gramaziokohler.arch.ethz.ch/web/e/forschung/index.html
     :alt: title
 
 .. end-badges
