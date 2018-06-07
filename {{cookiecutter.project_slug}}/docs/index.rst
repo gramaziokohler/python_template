@@ -1,5 +1,5 @@
 ============================
-{{cookiecutter.project_slug}}: {{cookiecutter.project_name}}
+{{ cookiecutter.project_slug }}: {{ cookiecutter.project_name }}
 ============================
 
 .. start-badges
@@ -12,7 +12,7 @@
 
 .. start-project description
 
-**{{cookiecutter.project_name}}** ...
+**{{ cookiecutter.project_name }}** ...
 
 
 ========
