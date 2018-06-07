@@ -1,6 +1,6 @@
-============================
+============================================================
 {{cookiecutter.project_slug}}: {{cookiecutter.project_name}}
-============================
+============================================================
 
 .. start-badges
 
@@ -24,6 +24,7 @@ Main features
 
 * feature
 * feature
+
 .. * more features
 
 **{{cookiecutter.project_slug}}** runs on Python x.x and x.x.
@@ -67,4 +68,4 @@ Releasing this project
 Credits
 -------------
 
-This package was created by {{cookiecutter.full_name}} <{{cookiecutter.email}}> `@{{cookiecutter.github_username}} <https://github.com/{{cookiecutter.github_username}}>`_ at Gramazio Kohler Research `@gramaziokohler <https://github.com/gramaziokohler>`_::
+This package was created by {{cookiecutter.full_name}} <{{cookiecutter.email}}> `@{{cookiecutter.github_username}} <https://github.com/{{cookiecutter.github_username}}>`_ at Gramazio Kohler Research `@gramaziokohler <https://github.com/gramaziokohler>`_
