@@ -12,7 +12,7 @@ A template for GKR python projects
 
 ## Requirements
 
-Install `cookiecutter` command line: `pip install cookiecutter`    
+Install `cookiecutter` command line: `pip install cookiecutter`
 
 ## Usage
 
@@ -25,12 +25,6 @@ Go to project folder:
 
 ```
 $ cd <project-slug>
-```
-
-Install dependencies for development workflow:
-
-```
-$ pip install -r requirements-dev.txt
 ```
 
 Now you can see which tasks are available:

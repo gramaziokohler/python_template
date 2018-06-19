@@ -113,7 +113,7 @@ def check(ctx):
     ctx.run('python setup.py check --strict --metadata --restructuredtext')
 
     log.write('Running flake8 python linter...')
-    ctx.run('flake8 src tests setup.py')
+    ctx.run('flake8 src setup.py')
 
     log.write('Checking python imports...')
     ctx.run('isort --check-only --diff --recursive src tests setup.py')
