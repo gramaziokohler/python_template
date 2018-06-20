@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 
+import codecs
 import contextlib
 import glob
 import os
@@ -83,7 +84,7 @@ def replaceText(node, newText):
 
 
 def updateSearchPaths(settings_file, python_source_path):
-    with open(settings_file) as file_handle:
+    with codecs.open(settings_file, 'r', encoding="ascii", errors="ignore") as file_handle:
         doc = parse(file_handle)
 
     for entry in doc.getElementsByTagName('entry'):
@@ -92,7 +93,7 @@ def updateSearchPaths(settings_file, python_source_path):
             if python_source_path not in current_paths:
                 replaceText(entry, current_paths + ';' + python_source_path)
 
-    with open(settings_file, 'wb') as file_handle:
+    with codecs.open(settings_file, 'w', encoding='utf-8') as file_handle:
         doc.writexml(file_handle)
 
 
