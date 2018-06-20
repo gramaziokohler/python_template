@@ -124,7 +124,7 @@ print('Go to this link and create an EMPTY repository named \'{{cookiecutter.pro
 print('Add a description, make it Private, and DO NOT select "Initialize with a README":\n')
 print('  https://github.com/organizations/gramaziokohler/repositories/new\n')
 
-if confirm('ARE YOU DONE? If so, we can link github automatically for you?\n(y)es, link now | (n)o, I will do it myself later'):
+if confirm('ARE YOU DONE? If so, we can link github automatically for you?\n(y)es, link now | (n)o, I will do it myself later: '):
     subprocess.call(['git', 'push', '--quiet', '-u', 'origin', 'master'])
 else:
     print('\nNo worries, you can finalize the link to github later running the following:\n')

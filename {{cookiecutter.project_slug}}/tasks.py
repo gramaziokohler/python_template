@@ -6,6 +6,7 @@ import glob
 import os
 import sys
 from shutil import rmtree
+from xml.dom.minidom import parse
 
 from invoke import Collection, Exit, task
 
@@ -51,6 +52,48 @@ def confirm(question):
             return True
 
         print('Focus, kid! It is either (y)es or (n)o', file=sys.stderr)
+
+
+# The IronPython install code is based on gh_python_remote
+# https://github.com/Digital-Structures/ghpythonremote
+# MIT License
+# Copyright (c) 2017 Pierre Cuvilliers, Caitlin Mueller, Massachusetts Institute of Technology
+def get_ironpython_path(rhino_version):
+    appdata_path = os.getenv('APPDATA', '')
+    ironpython_settings_path = os.path.join(appdata_path, 'McNeel', 'Rhinoceros', rhino_version, 'Plug-ins',
+                                            'IronPython (814d908a-e25c-493d-97e9-ee3861957f49)', 'settings')
+
+    if not os.path.isdir(ironpython_settings_path):
+        print('IronPython directory for Rhinoceros not found in {!s}.\n'.format(
+            ironpython_settings_path))
+        print('Cannot automatically make this project available to IronPython')
+        print(
+            'To add manually, open EditPythonScript on Rhinoceros, go to Tools -> Options')
+        print('and add the project path to the module search paths/')
+        raise RuntimeError('No IronPython folder found in %APPDATA%')
+
+    return ironpython_settings_path
+
+
+def replaceText(node, newText):
+    if node.firstChild.nodeType != node.TEXT_NODE:
+        raise Exception("Node does not contain text")
+
+    node.firstChild.replaceWholeText(newText)
+
+
+def updateSearchPaths(settings_file, python_source_path):
+    with open(settings_file) as file_handle:
+        doc = parse(file_handle)
+
+    for entry in doc.getElementsByTagName('entry'):
+        if entry.getAttribute('key') == 'SearchPaths':
+            current_paths = entry.firstChild.data
+            if python_source_path not in current_paths:
+                replaceText(entry, current_paths + ';' + python_source_path)
+
+    with open(settings_file, 'wb') as file_handle:
+        doc.writexml(file_handle)
 
 
 @task(default=True)
@@ -153,6 +196,24 @@ def release(ctx, release_type):
     else:
         raise Exit('Aborted release')
 
+
+@task()
+def add_to_rhino(ctx):
+    """Adds the current project to Rhino Python search paths."""
+    try:
+        python_source_path = os.path.join(os.getcwd(), 'src')
+        rhino_setting_per_version = [
+            ('5.0', 'settings.xml'), ('6.0', 'settings-Scheme__Default.xml')]
+        for version, filename in rhino_setting_per_version:
+            settings_file = os.path.join(get_ironpython_path(version), filename)
+            if not os.path.isfile(settings_file):
+                log.warn('Cannot find IronPython settings file for Rhino ' + version)
+            else:
+                updateSearchPaths(settings_file, python_source_path)
+                log.write('Updated search path for Rhino ' + version)
+
+    except RuntimeError as error:
+        raise Exit(error)
 
 
 @contextlib.contextmanager
