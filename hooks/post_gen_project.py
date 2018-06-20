@@ -78,7 +78,7 @@ print('To push your code to GitHub:\n')
 
 print('Go to this link and create an EMPTY repository named \'{{cookiecutter.project_slug}}\',\n')
 print('Add a description, make it Private, and DO NOT select "Initialize with a README":\n')
-print(' https://github.com/organizations/gramaziokohler/repositories/new')
+print('  https://github.com/organizations/gramaziokohler/repositories/new \n')
 
 print('After that, you can go to the project folder:\n')
 print('  cd {{cookiecutter.project_slug}}\n')
