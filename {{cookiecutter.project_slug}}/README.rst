@@ -20,7 +20,6 @@ Main features
 
 * feature
 * feature
-
 .. * more features
 
 **{{ cookiecutter.project_slug }}** runs on Python x.x and x.x.

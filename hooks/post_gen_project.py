@@ -122,7 +122,7 @@ print('To push your code to GitHub:\n')
 
 print('Go to this link and create an EMPTY repository named \'{{cookiecutter.project_slug}}\',\n')
 print('Add a description, make it Private, and DO NOT select "Initialize with a README":\n')
-print(' https://github.com/organizations/gramaziokohler/repositories/new\n')
+print('  https://github.com/organizations/gramaziokohler/repositories/new\n')
 
 if confirm('ARE YOU DONE? If so, we can link github automatically for you?\n(y)es, link now | (n)o, I will do it myself later'):
     subprocess.call(['git', 'push', '--quiet', '-u', 'origin', 'master'])
