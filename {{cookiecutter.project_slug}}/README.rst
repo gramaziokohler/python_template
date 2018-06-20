@@ -20,7 +20,7 @@ Main features
 
 * feature
 * feature
-.. * more features
+* more features
 
 **{{ cookiecutter.project_slug }}** runs on Python x.x and x.x.
 
@@ -48,7 +48,29 @@ Installation
 Contributing
 ------------
 
-.. Write contributing instructions here
+Make sure you setup your local development environment correctly:
+
+* Clone the `{{cookiecutter.project_slug}} <https://github.com/gramaziokohler/{{cookiecutter.project_slug}}>`_ repository.
+* Install development dependencies and make the project accessible from Rhino:
+
+::
+
+    pip install -r requirements-dev.txt
+    invoke add-to-rhino
+
+**You're ready to start working!**
+
+During development, use tasks on the
+command line to ease recurring operations:
+
+* ``invoke clean``: Clean all generated artifacts.
+* ``invoke check``: Run various code and documentation style checks.
+* ``invoke docs``: Generate documentation.
+* ``invoke test``: Run all tests and checks in one swift command.
+* ``invoke add-to-rhino``: Make the project accessible from Rhino.
+* ``invoke``: Show available tasks.
+
+For more details, check the `Contributor's Guide <CONTRIBUTING.rst>`_.
 
 
 Releasing this project

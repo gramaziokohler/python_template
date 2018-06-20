@@ -19,12 +19,12 @@ This project automates the set up of a new python-based project using a Cookiecu
 * A `src` directory where to place all the files containing code. It includes a `__init__.py` to make Python treat the project directories as containing packages. It also includes a documentation example for a sample class and sample function.
 * A `tests` directory containing a basic unit test using pytest
 
-* A `README.rst` file used as a GitHub project summary page
-* A `setup.py` file used to generate project install and releases
-* A `tasks.py` file used to automate common tasks
+* A `README.rst` used as a GitHub project summary page
+* A `setup.py` used to generate project install and releases
+* A `tasks.py` used to automate common tasks
 * A `.editorconfig` file for defining coding styles
-* A `CONTRIBUTING.rst` guide. This file is shown when sending a pull request or an issue on GitHub
-* A `CHANGELOG.rst` file which contains a chronologically ordered list of notable changes for each version of a project
+* A `CONTRIBUTING.rst` guide to use when sending a pull request or an issue on GitHub
+* A `CHANGELOG.rst` which contains a chronologically ordered list of notable changes for each version of a project
 * A `ISSUE_TEMPLATE.md` guide for when posting issues on GitHub
 * A `requirements-dev.txt` file with a list of installed dependencies
 * A `LICENSE` file that defaults to MIT License
@@ -34,6 +34,11 @@ This project automates the set up of a new python-based project using a Cookiecu
 Install `cookiecutter` command line: `pip install cookiecutter`
 
 ## Usage
+
+In the terminal, go to the folder where you want to place your project:
+```
+$ cd ..
+```
 
 Generate a new Cookiecutter template layout:
 ```
@@ -51,6 +56,12 @@ Now you can see which tasks are available:
 ```
 $ invoke help
 ```
+
+## Additional settings
+
+To use the coding style feature with [EditorConfig](https://editorconfig.org/):
+
+* Some text editors have a native EditorConfig. If yours doesn't you can download the appropriate plugin [here](https://editorconfig.org/#download).
 
 ## License
 
