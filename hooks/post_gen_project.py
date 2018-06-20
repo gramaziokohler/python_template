@@ -74,7 +74,10 @@ except RuntimeError as error:
 
 print('\nSetup completed SUCCESSFULLY!\n\n')
 
-print('Click here and create an EMPTY repository named \'{{cookiecutter.project_slug}}\' to be able to push your code to Github:')
+print('To push your code to GitHub:\n')
+
+print('Go to this link and create an EMPTY repository named \'{{cookiecutter.project_slug}}\',\n')
+print('Add a description, make it Private, and DO NOT select "Initialize with a README":\n')
 print(' https://github.com/organizations/gramaziokohler/repositories/new')
 
 print('After that, you can go to the project folder:\n')
