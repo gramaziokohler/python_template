@@ -31,6 +31,8 @@ This project automates the set up of a new python-based project using a Cookiecu
 
 ## Requirements
 
+Install `Git SCM` from https://git-scm.com/
+
 Install `cookiecutter` command line: `pip install cookiecutter`
 
 ## Usage
