@@ -37,7 +37,7 @@ Install `cookiecutter` command line: `pip install cookiecutter`
 
 In the terminal, go to the folder where you want to place your project:
 ```
-$ cd ..
+$ cd <your-projects-folder>
 ```
 
 Generate a new Cookiecutter template layout:
