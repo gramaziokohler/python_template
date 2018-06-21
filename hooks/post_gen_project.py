@@ -38,13 +38,7 @@ def get_ironpython_path(rhino_version):
                                             'IronPython (814d908a-e25c-493d-97e9-ee3861957f49)', 'settings')
 
     if not os.path.isdir(ironpython_settings_path):
-        print('IronPython directory for Rhinoceros not found in {!s}.\n'.format(
-            ironpython_settings_path))
-        print('Cannot automatically make this project available to IronPython')
-        print(
-            'To add manually, open EditPythonScript on Rhinoceros, go to Tools -> Options')
-        print('and add the project path to the module search paths/')
-        raise RuntimeError('No IronPython folder found in %APPDATA%')
+        return None
 
     return ironpython_settings_path
 
@@ -74,13 +68,26 @@ try:
     python_source_path = os.path.join(os.getcwd(), 'src')
     rhino_setting_per_version = [
         ('5.0', 'settings.xml'), ('6.0', 'settings-Scheme__Default.xml')]
+    setting_files_updated = 0
+
     for version, filename in rhino_setting_per_version:
-        settings_file = os.path.join(get_ironpython_path(version), filename)
+        ironpython_path = get_ironpython_path(version)
+
+        if not ironpython_path:
+            continue
+
+        settings_file = os.path.join(ironpython_path, filename)
         if not os.path.isfile(settings_file):
-            print('Cannot find IronPython settings file for Rhino ' + version)
+            print('IronPython settings for Rhino ' + version + ' not found')
         else:
             updateSearchPaths(settings_file, python_source_path)
             print('Updated search path for Rhino ' + version)
+            setting_files_updated += 1
+    
+    if setting_files_updated == 0:
+        print('Could not automatically make this project available to IronPython')
+        print('To add manually, open EditPythonScript on Rhinoceros, go to Tools -> Options')
+        print('and add the project path to the module search paths')
 
 except RuntimeError as error:
     print(error)
