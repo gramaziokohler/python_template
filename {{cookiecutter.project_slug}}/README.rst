@@ -10,12 +10,11 @@
     :width: 116px
     :alt: GKR
 
-::
-
 .. end-badges
 
 .. start-project description
 
+::
 **{{ cookiecutter.project_short_description }}** ...
 
 
