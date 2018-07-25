@@ -6,12 +6,13 @@
 
 .. image:: logo.jpg
     :target: http://gramaziokohler.arch.ethz.ch
-    :scale: 75 %
-    :alt: GKR
+    :height: 200px
+    :width: 116px
+    :alt: GKR::
 
 .. end-badges
 
-.. start-project description::
+.. start-project description
 
 **{{ cookiecutter.project_short_description }}** ...
 
