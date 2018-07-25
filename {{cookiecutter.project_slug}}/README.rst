@@ -5,13 +5,15 @@
 .. start-badges
 
 .. image:: logo.jpg
-    :target: http://gramaziokohler.arch.ethz.ch/
+    :target: http://gramaziokohler.arch.ethz.ch
+    :scale: 75 %
     :alt: GKR
 
 .. end-badges
 
 .. start-project description
 
+::
 **{{ cookiecutter.project_short_description }}** ...
 
 
