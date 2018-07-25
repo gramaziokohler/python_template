@@ -15,6 +15,7 @@
 .. start-project description
 
 ::
+
 **{{ cookiecutter.project_short_description }}** ...
 
 
