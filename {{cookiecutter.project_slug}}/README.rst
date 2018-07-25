@@ -4,7 +4,9 @@
 
 .. start-badges
 
-.. image:: ../00_logo.jpg
+.. image:: ../logo.jpg
+    :target: http://gramaziokohler.arch.ethz.ch/
+    :alt: GKR
 
 .. end-badges
 
