@@ -11,9 +11,8 @@
 
 .. end-badges
 
-.. start-project description
+.. start-project description::
 
-::
 **{{ cookiecutter.project_short_description }}** ...
 
 
