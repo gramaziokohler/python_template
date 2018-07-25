@@ -8,7 +8,9 @@
     :target: http://gramaziokohler.arch.ethz.ch
     :height: 200px
     :width: 116px
-    :alt: GKR::
+    :alt: GKR
+
+::
 
 .. end-badges
 
