@@ -36,12 +36,18 @@ extlinks = {
 # on_rtd is whether we are on readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 html_theme = 'alabaster'
+html_theme_options = {
+    'description': '{{cookiecutter.project_name}}',
+    'github_user': 'gramaziokohler',
+    'github_repo': project,
+    'fixed_sidebar': True,
+}
 
 html_use_smartypants = True
 html_last_updated_fmt = '%b %d, %Y'
 html_split_index = False
 html_sidebars = {
-   '**': ['searchbox.html', 'globaltoc.html', 'sourcelink.html'],
+   '**': ['about.html', 'navigation.html', 'searchbox.html'],
 }
 html_short_title = '%s-%s' % (project, version)
 
