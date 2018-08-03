@@ -38,6 +38,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 html_theme = 'alabaster'
 html_theme_options = {
     'description': '{{cookiecutter.project_name}}',
+    'logo': 'logo.jpg',
     'github_user': 'gramaziokohler',
     'github_repo': project,
     'fixed_sidebar': True,

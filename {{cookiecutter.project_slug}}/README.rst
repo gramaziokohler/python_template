@@ -4,11 +4,6 @@
 
 .. start-badges
 
-.. image:: logo.jpg
-    :target: http://gramaziokohler.arch.ethz.ch
-    :height: 200px
-    :width: 116px
-    :alt: GKR
 
 .. end-badges
 
