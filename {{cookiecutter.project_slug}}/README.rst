@@ -4,12 +4,13 @@
 
 .. start-badges
 
+.. image:: https://img.shields.io/badge/License-MIT-blue.svg
+    :target: https://github.com/gramaziokohler/{{cookiecutter.project_slug}}/blob/master/LICENSE
+    :alt: License MIT
 
 .. end-badges
 
-.. start-project description
-
-
+.. Write project description
 
 **{{ cookiecutter.project_short_description }}** ...
 

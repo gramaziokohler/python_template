@@ -4,13 +4,13 @@
 
 .. start-badges
 
-.. image:: https://avatars3.githubusercontent.com/u/32545728?s=200&v=4
-    :target: http://gramaziokohler.arch.ethz.ch/web/e/forschung/index.html
-    :alt: title
+.. image:: https://img.shields.io/badge/License-MIT-blue.svg
+    :target: https://github.com/gramaziokohler/{{cookiecutter.project_slug}}/blob/master/LICENSE
+    :alt: License MIT
 
 .. end-badges
 
-.. start-project description
+.. Write project description
 
 **{{ cookiecutter.project_short_description }}** ...
 
