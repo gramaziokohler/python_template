@@ -38,7 +38,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 html_theme = 'alabaster'
 html_theme_options = {
     'description': '{{cookiecutter.project_name}}',
-    'logo': 'logo.jpg',
+    'logo': 'logo.png',
     'github_user': 'gramaziokohler',
     'github_repo': project,
     'fixed_sidebar': True,
@@ -47,6 +47,7 @@ html_theme_options = {
 html_use_smartypants = True
 html_last_updated_fmt = '%b %d, %Y'
 html_split_index = False
+html_static_path = ['_static']
 html_sidebars = {
    '**': ['about.html', 'navigation.html', 'searchbox.html'],
 }
