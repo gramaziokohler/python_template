@@ -8,6 +8,10 @@
     :target: https://github.com/{{cookiecutter.github_organization}}/{{cookiecutter.project_slug}}/blob/master/LICENSE
     :alt: License MIT
 
+.. image:: https://travis-ci.org/{{cookiecutter.github_organization}}/{{cookiecutter.project_slug}}.svg?branch=master
+    :target: https://travis-ci.org/{{cookiecutter.github_organization}}/{{cookiecutter.project_slug}}
+    :alt: Travis CI
+
 .. end-badges
 
 .. Write project description
