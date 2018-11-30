@@ -30,8 +30,8 @@ version = release = '0.1.0'
 pygments_style = 'trac'  # Perhaps change to sphinx
 templates_path = ['.']
 extlinks = {
-    'issue': ('https://github.com/gramaziokohler/{{cookiecutter.project_slug}}/issues/%s', '#'),
-    'pr': ('https://github.com/gramaziokohler/{{cookiecutter.project_slug}}/pull/%s', 'PR #'),
+    'issue': ('https://github.com/{{cookiecutter.github_organization}}/{{cookiecutter.project_slug}}/issues/%s', '#'),
+    'pr': ('https://github.com/{{cookiecutter.github_organization}}/{{cookiecutter.project_slug}}/pull/%s', 'PR #'),
 }
 # on_rtd is whether we are on readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
@@ -39,7 +39,7 @@ html_theme = 'alabaster'
 html_theme_options = {
     'logo': 'logo.png',
     'description': '{{cookiecutter.project_name}}',
-    'github_user': 'gramaziokohler',
+    'github_user': '{{cookiecutter.github_organization}}',
     'github_repo': project,
     'fixed_sidebar': True,
 }

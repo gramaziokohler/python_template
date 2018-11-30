@@ -5,7 +5,7 @@
 .. start-badges
 
 .. image:: https://img.shields.io/badge/License-MIT-blue.svg
-    :target: https://github.com/gramaziokohler/{{cookiecutter.project_slug}}/blob/master/LICENSE
+    :target: https://github.com/{{cookiecutter.github_organization}}/{{cookiecutter.project_slug}}/blob/master/LICENSE
     :alt: License MIT
 
 .. end-badges
@@ -50,7 +50,7 @@ Contributing
 
 Make sure you setup your local development environment correctly:
 
-* Clone the `{{cookiecutter.project_slug}} <https://github.com/gramaziokohler/{{cookiecutter.project_slug}}>`_ repository.
+* Clone the `{{cookiecutter.project_slug}} <https://github.com/{{cookiecutter.github_organization}}/{{cookiecutter.project_slug}}>`_ repository.
 * Install development dependencies and make the project accessible from Rhino:
 
 ::
@@ -85,4 +85,4 @@ Releasing this project
 Credits
 -------------
 
-This package was created by {{ cookiecutter.full_name }} <{{ cookiecutter.email }}> `@{{ cookiecutter.github_username }} <https://github.com/{{ cookiecutter.github_username }}>`_ at Gramazio Kohler Research `@gramaziokohler <https://github.com/gramaziokohler>`_
+This package was created by {{ cookiecutter.full_name }} <{{ cookiecutter.email }}> `@{{ cookiecutter.github_username }} <https://github.com/{{ cookiecutter.github_username }}>`_ at `@{{cookiecutter.github_organization}} <https://github.com/{{cookiecutter.github_organization}}>`_

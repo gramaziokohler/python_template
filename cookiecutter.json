@@ -1,6 +1,7 @@
 {
     "full_name": "Your name",
     "email": "Your address email (eg. you@example.com)",
+    "github_organization": "gramaziokohler",
     "github_username": "Your personal github username (eg. davidbowie)",
     "project_name": "Name of the project (eg. Mesh Mould Metal)",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",

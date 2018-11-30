@@ -5,7 +5,7 @@
 .. start-badges
 
 .. image:: https://img.shields.io/badge/License-MIT-blue.svg
-    :target: https://github.com/gramaziokohler/{{cookiecutter.project_slug}}/blob/master/LICENSE
+    :target: https://github.com/{{cookiecutter.github_organization}}/{{cookiecutter.project_slug}}/blob/master/LICENSE
     :alt: License MIT
 
 .. end-badges

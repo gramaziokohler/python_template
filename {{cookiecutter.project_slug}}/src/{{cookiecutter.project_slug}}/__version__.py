@@ -1,6 +1,6 @@
 __title__ = '{{cookiecutter.project_slug}}'
 __description__ = '{{cookiecutter.project_short_description}}'
-__url__ = 'https://github.com/gramaziokohler/{{cookiecutter.project_slug}}'
+__url__ = 'https://github.com/{{cookiecutter.github_organization}}/{{cookiecutter.project_slug}}'
 __version__ = '{{cookiecutter.version}}'
 __author__ = 'Gramazio Kohler Research'
 __author_email__ = 'gramaziokohler@arch.ethz.ch'
