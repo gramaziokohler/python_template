@@ -12,6 +12,7 @@ This project automates the set up of a new python-based project using a Cookiecu
 * Basic setup script to create pip installable packages
 * Automation of common tasks for development workflow based on [pyinvoke](http://www.pyinvoke.org/) (generate documentation, run tests, check format, etc.)
 * [EditorConfig](https://editorconfig.org/) integration
+* Minimal [Travis-CI integration](https://travis-ci.org)
 
 ## What's included
 
@@ -22,6 +23,7 @@ This project automates the set up of a new python-based project using a Cookiecu
 * A `README.rst` used as a GitHub project summary page
 * A `setup.py` used to generate project install and releases
 * A `tasks.py` used to automate common tasks
+* A `.travis.yml` file with a minimal configuration to integrate with Travis CI. 
 * A `.editorconfig` file for defining coding styles
 * A `CONTRIBUTING.rst` guide to use when sending a pull request or an issue on GitHub
 * A `CHANGELOG.rst` which contains a chronologically ordered list of notable changes for each version of a project
@@ -64,6 +66,10 @@ $ invoke help
 To use the coding style feature with [EditorConfig](https://editorconfig.org/):
 
 * Some text editors have a native EditorConfig. If yours doesn't you can download the appropriate plugin [here](https://editorconfig.org/#download).
+
+To activate Continuous Integration:
+
+* [Enable the repository in your Travis CI account](https://travis-ci.org/profile).
 
 ## License
 
