@@ -27,7 +27,7 @@ This project automates the set up of a new python-based project using a Cookiecu
 * A `.editorconfig` file for defining coding styles
 * A `CONTRIBUTING.rst` guide to use when sending a pull request or an issue on GitHub
 * A `CHANGELOG.rst` which contains a chronologically ordered list of notable changes for each version of a project
-* A `ISSUE_TEMPLATE.md` guide for when posting issues on GitHub
+* A `.github/ISSUE_TEMPLATE` folder to guide others to report issues and feature request to GitHub
 * A `requirements-dev.txt` file with a list of installed dependencies
 * A `LICENSE` file that defaults to MIT License
 

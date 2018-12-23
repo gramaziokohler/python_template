@@ -2,13 +2,14 @@ graft docs
 graft src
 graft tests
 
+prune .github
+
 include .bumpversion.cfg
 include .editorconfig
 
 include AUTHORS.rst
 include CHANGELOG.rst
 include CONTRIBUTING.rst
-include ISSUE_TEMPLATE.md
 include LICENSE
 include README.rst
 
