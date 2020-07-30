@@ -16,20 +16,21 @@ This project automates the set up of a new python-based project using a Cookiecu
 
 ## What's included
 
-* A `docs` directory with a pre-configured Sphinx documentation setup
-* A `src` directory where to place all the files containing code. It includes a `__init__.py` to make Python treat the project directories as containing packages. It also includes a documentation example for a sample class and sample function.
-* A `tests` directory containing a basic unit test using pytest
-
-* A `README.rst` used as a GitHub project summary page
-* A `setup.py` used to generate project install and releases
-* A `tasks.py` used to automate common tasks
-* A `.travis.yml` file with a minimal configuration to integrate with Travis CI. 
-* A `.editorconfig` file for defining coding styles
-* A `CONTRIBUTING.rst` guide to use when sending a pull request or an issue on GitHub
-* A `CHANGELOG.rst` which contains a chronologically ordered list of notable changes for each version of a project
-* A `.github/ISSUE_TEMPLATE` folder to guide others to report issues and feature request to GitHub
-* A `requirements-dev.txt` file with a list of installed dependencies
-* A `LICENSE` file that defaults to MIT License
+* Folder structure:
+  * `docs` directory with a pre-configured Sphinx documentation setup
+  * `src` directory where to place all the files containing code. It includes a `__init__.py` to make Python treat the project directories as containing packages. It also includes a documentation example for a sample class and sample function.
+  * `tests` directory containing a basic unit test using pytest
+* Files at root:
+  * `README.rst` used as a GitHub project summary page
+  * `setup.py` used to generate project install and releases
+  * `tasks.py` used to automate common tasks
+  * `.travis.yml` file with a minimal configuration to integrate with Travis CI. 
+  * `.editorconfig` file for defining coding styles
+  * `CONTRIBUTING.rst` guide to use when sending a pull request or an issue on GitHub
+  * `CHANGELOG.rst` which contains a chronologically ordered list of notable changes for each version of a project
+  * `.github/ISSUE_TEMPLATE` folder to guide others to report issues and feature request to GitHub
+  * `requirements-dev.txt` file with a list of installed dependencies
+  * `LICENSE` file that defaults to MIT License
 
 ## Requirements
 
@@ -55,7 +56,25 @@ Go to project folder:
 $ cd <project-slug>
 ```
 
-Now you can see which tasks are available:
+Now you are ready to install the newly created project. It is recommended that you create a `conda` environment for it, for instance, if you plan to use Python 3.8 you could create it with the following command:
+
+```
+$ conda create -n NAME_OF_YOUR_PROJECT_ENV python=3.8
+```
+
+Activate the environment:
+
+```
+$ conda activate NAME_OF_YOUR_PROJECT_ENV
+```
+
+Now we are ready to install the project that we have just created:
+
+```
+$ pip install -r requirements-dev.txt
+```
+
+To see which automation tasks are available, use:
 
 ```
 $ invoke help
