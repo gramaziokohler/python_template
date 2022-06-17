@@ -1,3 +1,7 @@
+# Deprecated
+
+**Use the COMPAS extension template for new projects instead: https://github.com/compas-dev/tpl-extension**
+
 # python_template
 
 This project automates the set up of a new python-based project using a Cookiecutter template.
